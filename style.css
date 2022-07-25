@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Cairo:wght@400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding:0;
+    margin:0;
+    -moz-box-sizing:borde-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style:none;
+    font-family: 'Open Sans', sans-serif;
+}
+html{
+    font-size:16px;
+}
+::selection{
+    background:red;
+    color:aliceblue;
+}
+.contanier{
+    width:100%;
+    height:100%;
+    margin:150px;
+    perspective: 2000px;
+    display:flex;
+}
+.box{
+    position:relative;
+    width:200px;
+    height:200px;
+    transform-style:preserve-3d;
+    transition:transform 1s;
+    margin:30px;
+}
+.box:hover{
+    transform:rotateY(180deg);
+}
+.box .face{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    backface-visibility: hidden;
+    color:#fff;
+    font-size:30px;
+    font-weight:bold;
+    line-height:200px;
+}
+.box .front{
+    background:red;
+}
+.box .back{
+    background:green;
+    transform:rotateY(-180deg);
+}
